@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miniproject</title>
+    <!-- link css leaflet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <!-- link js leaflet -->
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <style>
+       
+     
+      
+
+      
+    </style>
+   <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+</head>
+
+
+<body>
+<div class="container">
+    <!-- เเทบซ้าย -->
+ <div class="box">
+    <div class="flex-shrink-0 p-3" style="width: 280px;">
+        <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+          <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          <span class="fs-5 fw-semibold"><h1 class="SWU" >SWU</h1><p><h5 class="station">Station</h5></p></span>
+        </a>
+        <ul class="list-unstyled ps-0">
+          <li class="mb-1">
+            <h3><b>ป้ายตรงข้าม มศว</b></h3>
+            <button class="v" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+              มศว>เเยกประตูน้ำ><br>อนุสาวรีย์ชัยสมรภูมิ <b>(สาย 3-8)</b>
+            </button>
+            <div class="collapse show" id="home-collapse">
+              <ul class="btn">
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">โรงเรียนเซนต์ดอมินิก 15บาท</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">โรงแรมรอยัลปริ๊นซ์โฮเต็ล 15บาท</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">แยกมิตรสัมพันธ์(ถนนเพชรบุรีขาเข้า) 15บาท</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button class="v" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+            มศว>ALPราม>ALPหัวหมาก<br><b>(สาย 3-53)</b>
+            </button>
+            <div class="collapse" id="dashboard-collapse">
+              <ul class="btn">
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button class="v" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+              มศว>สวนสันติภาพ><br>ซอยจรัญสนิทวงศ์ 96/2 <br><b>(สาย 3-55)</b> 
+            </button>
+            <div class="collapse" id="orders-collapse">
+              <ul class="btn">
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="border-top my-3"></li>
+      <div class="this">
+          <li class="mb-1">
+            <h3><b>ป้ายฝั่ง มศว</b></h3>
+            <button class="v" data-bs-toggle="collapse" data-bs-target="#r" aria-expanded="false">
+             มศว>เซ็นทรัลบางนา>อู่ไทยสมายล์บัส รามคำแหง 2<b>(สาย 3-8)</b>
+            </button>
+            <div class="collapse" id="r">
+              <ul class="btn">
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button class="v" data-bs-toggle="collapse" data-bs-target="#e" aria-expanded="false">
+              มศว>วัดหัวลำโพง><br>โรงเรียนเบญจมราชาลัย<b><br>(สาย 3-53)</b>
+            </button>
+            <div class="collapse" id="e">
+              <ul class="btn">
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="mb-1">
+            <button class="v" data-bs-toggle="collapse" data-bs-target="#f" aria-expanded="false">
+             มศว>ตรงข้ามสวนเบญจกิติ>ท่าเรือคลองเตย<b>(สาย 3-55)</b>
+            </button>
+            <div class="collapse" id="f">
+              <ul class="btn">
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>
+                <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a></li>
+              </ul>
+            </div>
+          </li>
+      </div>
+        </ul>
+      </div>
+ </div>
+        <div class="m">
+            <div id="map"></div>
+        </div>
+      <script src="js/bootstrap.min.js"></script>    
+</div>
+    <script>
+    // create map
+       var map = L.map('map').setView([13.744013721603636, 100.56610673954518], 15) 
+    //    basedmap2
+       var OSM = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors'
+          }).addTo(map);     
+    //  basedmap2
+         var OpenStreetMap_France = L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+        maxZoom: 20,
+        attribution: '&copy; OpenStreetMap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+         }).addTo(map);
+        // basedmap3
+        var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+        }).addTo(map);
+        // create Layer
+        var baseLayers ={
+            'OSM' : OSM,
+            'penStreetMap_France' :OpenStreetMap_France,
+            'OpenStreetMap_HOT ': OpenStreetMap_HOT        
+        }
+        L.control.layers(baseLayers).addTo(map);
+
+        var point = L.marker([13.744013721603636, 100.56610673954518],
+            {
+            draggable: true, // Make the icon dragable
+            title: 'SWU', // Add a title
+            opacity: 1.5 // Adjust the opacity
+            } 
+            ).addTo(map);
+    </script>
+</body>       
+</html>

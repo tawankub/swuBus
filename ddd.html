@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miniproject</title>
+    <!-- link css leaflet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <!-- link js leaflet -->
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <!-- link css -->
+    <link rel="stylesheet" href="st.css">
+  
+</head>
+<body>
+
+<div class="box">
+    <div class="left" style = 'width: 30%'> 
+        <div><h1 class="SWU" >SWU</h1><p><h5 class="station">Station</h5></p> </div>
+        
+        <center><ul class = 'line'></ul> </center>
+    <ul class = 'text'>
+        <!-- ตรงข้ามมศว -->
+    <div class= 'boxone'>       
+        <div class="here"><h4><b>ป้ายตรงข้าม มศว</b></h4> </div>
+       <button class = 'accordion'  > มศว>เเยกประตูน้ำ><br>อนุสาวรีย์ชัยสมรภูมิ <b>(สาย 3-8)</b></button> 
+   
+        <div class = 'panel' >
+         <ul class = 'threeeight'  onclick="topFunction()" id="myBtn" >
+            <li><a href="#" class="btn">โรงเรียนเซนต์ดอมินิก 15บาท</a></li>
+            <li><a href="#" class="btn">โรงแรมรอยัลปริ๊นซ์โฮเต็ล 15บาท</a></li>
+            <li><a href="#" class="btn">แยกมิตรสัมพันธ์(ถนนเพชรบุรีขาเข้า) 15บาท</a></li>
+            <li><a href="#" class="btn">นิคมมักกะสัน(ถนนเพชรบุรีขาเข้า),15บาท</a></li>
+            <li><a href="#" class="btn">วัดมักกะสัน,15บาท</a></li>
+            <li><a href="#" class="btn">เมโทร,15บาท</a></li>
+            <li><a href="#" class="btn">แยกประตูน้ำ,15บาท</a></li>
+            <li><a href="#" class="btn">อินทราสแควร์ประตูน้ำ,20บาท</a></li>
+            <li><a href="#" class="btn">ซอยรางน้ำ,20บาท</a></li>
+            <li><a href="#" class="btn">ตรงข้ามวัดตะพาน,20บาท</a></li>
+            <li><a href="#" class="btn">สวนสันติภาพ,20บาท</a></li>
+            <li><a href="#" class="btn">อนุสาวรีย์ชัยสมรภูมิ (เกาะพหลโยธิน),20บาท</a></li>
+
+         </ul>
+        </div> 
+
+        <button class="popup" onclick="myFunction()"  > มศว>ALPราม>ALPหัวหมาก<br><b>(สาย 3-53)</b>
+   
+            <span class="popuptext" id="myPopup">
+            <li><a href="#" class="btn">โรงแรมแลงคาสเตอร์,15บาท</a></li>
+            <li><a href="#" class="btn">ตรงข้ามโรงแรมอวานี เอเทรียม,15บาท</a></li>
+            <li><a href="#" class="btn">อาคารอิตัลไทย,15บาท</a></li>
+            <li><a href="#" class="btn">อาร์ซีเอ,15บาท</a></li>
+            <li><a href="#" class="btn">ซอยศูนย์วิจัย,15บาท</a></li>
+            <li><a href="#" class="btn">สถานีคลองตัน,15บาท</a></li>
+            <li><a href="#" class="btn">หลังแยกเอกมัยเหนือ,15บาท</a></li>
+            <li><a href="#" class="btn">รพ.เพชรเวช,15บาท</a></li>
+            <li><a href="#" class="btn">ARL รามคำแหง,20บาท</a></li>
+            <li><a href="#" class="btn">กฟน.บางกะปิ,20บาท</a></li>
+            <li><a href="#" class="btn">โรงแรมอัลมีรอซ,20บาท</a></li>
+            <li><a href="#" class="btn">ซอยรามคำแหง 7,20บาท</a></li>
+            <li><a href="#" class="btn">เดอะมอลล์รามคำแหง,20บาท</a></li>
+            <li><a href="#" class="btn">บิ๊กซีหัวหมาก,20บาท</a></li>
+            <li><a href="#" class="btn">ตรงข้ามหมู่บ้านรามทาวน์เฮ้าส์,20บาท</a></li>
+            <li><a href="#" class="btn">ด้านหลัง ม.รามคำแหง,20บาท</a></li>
+            <li><a href="#" class="btn">ด้านหลังราชมังคลากีฬาสถาน,20บาท</a></li>
+            <li><a href="#" class="btn">ตรงข้ามซอยรามคำแหง 24 แยก 22,20บาท</a></li>
+            <li><a href="#" class="btn">ด้านหลังการกีฬาแห่งประเทศไทย,20บาท</a></li>
+            <li><a href="#" class="btn">ตรงข้ามหมู่บ้านศีขริน,20บาท</a></li>
+            <li><a href="#" class="btn">ตรงข้าม ม.อัสสัมชัญ หัวหมาก,20บาท</a></li>
+            <li><a href="#" class="btn">พนาสินเพลส,20บาท</a></li>
+            <li><a href="#" class="btn">ด้านหลังโอสถสภา,20บาท</a></li>
+            <li><a href="#" class="btn">หมู่บ้านเดชา,20บาท</a></li>
+            <li><a href="#" class="btn">หมู่บ้านพลัสซิตี้พาร์ค หัวหมาก,20บาท</a></li>
+            <li><a href="#" class="btn">ซอยหัวหมาก 20,20บาท</a></li>
+            <li><a href="#" class="btn">ตรงข้ามคอนโดยู หัวหมากสเตชั่น,20บาท</a></li>
+            <li><a href="#" class="btn">ตรงข้ามยูดีไลท์ หัวหมากสเตชั่น,20บาท</a></li>
+            <li><a href="#" class="btn">สุขเกษมเพลส,20บาท</a></li>
+            <li><a href="#" class="btn">ซอยศรีนครินทร์ 7,20บาท</a></li>
+            <li><a href="#" class="btn">ตรงข้าม รพ.สมิติเวช ศรีนครินทร์,20บาท</a></li>
+            <li><a href="#" class="btn">ARL หัวหมาก,20บาท</a></li>
+        </span>   
+    </button> 
+        <button class = 'accordion'  > มศว>สวนสันติภาพ><br>ซอยจรัญสนิทวงศ์ 96/2 <br><b>(สาย 3-55)</b> </button> 
+   
+        <div class = 'panel' >
+         <ul class = 'threeeight' id = 'click' >
+            <li><a href="#" class="btn">โรงเรียนเซนต์ดอมินิก 15บาท</a></li>
+            <li><a href="#" class="btn">โรงแรมรอยัลปริ๊นซ์โฮเต็ล 15บาท</a></li>
+            <li><a href="#" class="btn">แยกมิตรสัมพันธ์(ถนนเพชรบุรีขาเข้า) 15บาท</a></li>
+         </ul>
+        </div>       
+    </div>
+    <!-- ฝั่งมศว -->
+    <div class="boxtwo">
+        <div class="there"><h4><b>ป้ายฝั่ง มศว</b></h4> </div>  
+        <button class = 'accordion'  >  มศว>เซ็นทรัลบางนา>อู่ไทยสมายล์บัส รามคำแหง 2<b>(สาย 3-8)</b></button> 
+   
+        <div class = 'panel' >
+         <ul class = 'threeeight' id = 'click' >
+            <li><a href="#" class="btn">โรงเรียนเซนต์ดอมินิก 15บาท</a></li>
+            <li><a href="#" class="btn">โรงแรมรอยัลปริ๊นซ์โฮเต็ล 15บาท</a></li>
+            <li><a href="#" class="btn">แยกมิตรสัมพันธ์(ถนนเพชรบุรีขาเข้า) 15บาท</a></li>
+         </ul>
+        </div> 
+
+        <button class = 'accordion'  >  มศว>วัดหัวลำโพง><br>โรงเรียนเบญจมราชาลัย<b><br>(สาย 3-53)</b></button> 
+   
+        <div class = 'panel' >
+         <ul class = 'threeeight' id = 'click' >
+            <li><a href="#" class="btn">โรงเรียนเซนต์ดอมินิก 15บาท</a></li>
+            <li><a href="#" class="btn">โรงแรมรอยัลปริ๊นซ์โฮเต็ล 15บาท</a></li>
+            <li><a href="#" class="btn">แยกมิตรสัมพันธ์(ถนนเพชรบุรีขาเข้า) 15บาท</a></li>
+         </ul>
+        </div> 
+
+        <button class = 'accordion'  > มศว>ตรงข้ามสวนเบญจกิติ>ท่าเรือคลองเตย<b>(สาย 3-55)</b></button> 
+   
+        <div class = 'panel' >
+         <ul class = 'threeeight' id = 'click' >
+            <li><a href="#" class="btn">โรงเรียนเซนต์ดอมินิก 15บาท</a></li>
+            <li><a href="#" class="btn">โรงแรมรอยัลปริ๊นซ์โฮเต็ล 15บาท</a></li>
+            <li><a href="#" class="btn">แยกมิตรสัมพันธ์(ถนนเพชรบุรีขาเข้า) 15บาท</a></li>
+         </ul>
+        </div> 
+    </div>
+    </ul>
+    </div> 
+
+
+    
+        <div class="m">
+            <div id="map"></div>
+        </div>
+</div>
+</div>      
+</body>
+<script src="st.js"></script>
+</html>
